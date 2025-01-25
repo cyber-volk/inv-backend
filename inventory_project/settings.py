@@ -10,9 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'your-secret-key-replace-in-production'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'cybervolk.pythonanywhere.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -92,5 +92,6 @@ AUTH_USER_MODEL = 'inventory.User'
 
 # Additional settings for static and media files
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
